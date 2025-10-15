@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.calculator {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    width: 100%;
+    max-width: 400px;
+}
+
+.display {
+    background: #2d3748;
+    padding: 24px;
+    text-align: right;
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.previous-operand {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 20px;
+    min-height: 28px;
+    margin-bottom: 8px;
+}
+
+.current-operand {
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: 300;
+    min-height: 48px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: #e2e8f0;
+    padding: 1px;
+}
+
+.btn {
+    background: #ffffff;
+    border: none;
+    padding: 24px;
+    font-size: 24px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    color: #2d3748;
+}
+
+.btn:hover {
+    background: #f7fafc;
+    transform: scale(0.98);
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+.btn-number {
+    color: #2d3748;
+}
+
+.btn-operator {
+    background: #edf2f7;
+    color: #667eea;
+    font-weight: 600;
+}
+
+.btn-operator:hover {
+    background: #e2e8f0;
+}
+
+.btn-clear {
+    background: #fc8181;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.btn-clear:hover {
+    background: #f56565;
+}
+
+.btn-equals {
+    background: #48bb78;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.btn-equals:hover {
+    background: #38a169;
+}
+
+.span-2 {
+    grid-column: span 2;
+}
+
+@media (max-width: 480px) {
+    .calculator {
+        max-width: 100%;
+        border-radius: 0;
+    }
+
+    .btn {
+        padding: 20px;
+        font-size: 20px;
+    }
+
+    .current-operand {
+        font-size: 32px;
+    }
+
+    .previous-operand {
+        font-size: 18px;
+    }
+}
